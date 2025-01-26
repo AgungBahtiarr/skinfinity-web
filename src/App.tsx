@@ -36,9 +36,12 @@ function App() {
             <a href="#" className="hover:text-[#9bbbf4]">
               Contact
             </a>
-            <button className="bg-[#9bbbf4] text-white px-6 py-2 rounded-full hover:bg-blue-500">
+            <a
+              href="/dashboard"
+              className="bg-[#9bbbf4] text-white px-6 py-2 rounded-full hover:bg-blue-500"
+            >
               Sign In
-            </button>
+            </a>
           </div>
           <button className="md:hidden">
             <Menu className="w-6 h-6" />
@@ -222,7 +225,9 @@ function App() {
             ].map((plan, index) => (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-xl shadow-sm ${plan.popular ? "ring-2 ring-[#9bbbf4]" : ""}`}
+                className={`bg-white p-8 rounded-xl shadow-sm ${
+                  plan.popular ? "ring-2 ring-[#9bbbf4]" : ""
+                }`}
               >
                 {plan.popular && (
                   <span className="bg-[#9bbbf4] text-white px-3 py-1 rounded-full text-sm">
@@ -243,7 +248,11 @@ function App() {
                   ))}
                 </ul>
                 <button
-                  className={`w-full py-2 rounded-full ${plan.popular ? "bg-[#9bbbf4] text-white" : "border border-[#9bbbf4] text-[#9bbbf4]"}`}
+                  className={`w-full py-2 rounded-full ${
+                    plan.popular
+                      ? "bg-[#9bbbf4] text-white"
+                      : "border border-[#9bbbf4] text-[#9bbbf4]"
+                  }`}
                 >
                   Get Started
                 </button>
@@ -339,11 +348,11 @@ function App() {
                           {item}
                         </a>
                       </li>
-                    ),
+                    )
                   )}
                 </ul>
               </div>
-            ),
+            )
           )}
         </div>
       </footer>
